@@ -1,0 +1,15 @@
+@import url("../../node_modules/@fortawesome/fontawesome-free/css/all.min.css");
+
+//absratcts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+//base
+@import "base/reset";
+
+//layout
+@import "layout/header";
+
+//component
+@import "components/landPage";
+@import "components/reviewCard";

@@ -1,0 +1,100 @@
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    padding-top: 10%;
+    left: 0;
+    top: 0;
+    @include size(100%,100%);
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); }
+   .sec{
+      width: 50%;
+       background-color:$white;
+       border: 1px solid $light-gray;
+       border-radius:0.5rem;
+       position: absolute;
+       left:25%;}
+    .modal-content{
+        @include flex(row,space-between,center);
+        padding: 2%;
+        border: 1px solid $light-gray;
+        text-transform: uppercase;
+        font-weight: bold;   
+    }
+    .close {
+        cursor: pointer;
+        color: $silver;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .rating-form{
+        @include flex(column,space-evenly,flex-start);
+        margin: 1% 0;
+        padding: 1% 0;
+      }
+      .stars{
+          @include flex(row,flex-start);
+          // margin: 20% 0;
+          color:$light-gray;
+          
+      }
+      .form-control{
+          @include flex(column,space-between,flex-start);
+          margin: 0.5%;
+          padding: 0 2%;
+      }
+    .inp{
+            margin: 1% 0;
+            border: 1px solid $light-gray;
+            background-color:$light-gray ;
+            border-radius:.4rem
+    }
+    .radio {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .input1{
+width:65rem;
+height: 5rem;
+@media #{$media-desktop} {
+    width:fit-content;
+  }
+    }
+    .input2{
+width:65rem;
+height: 10rem;
+@media #{$media-desktop} {
+    width:fit-content;
+  }
+    }
+    
+    .submit{
+        font-weight: 600;
+        color: #FFFFFF;
+        background-color: #00b68e;
+        width: 18rem;
+        padding: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: .5rem;
+        margin-left: 70%;
+        cursor: pointer;
+        @media #{$media-desktop} {
+            width:fit-content;
+          }
+        
+    }
+    .line{
+        border: 0.1px solid $light-gray;
+        width:100%;
+        margin: 3% 0;
+    }
+    input:focus,textarea:focus{
+        outline: none !important;
+        border:2px solid $light-blue;
+    }
+    
+.block{display: block;}

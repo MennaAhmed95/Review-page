@@ -1,0 +1,34 @@
+//black
+$main-black:#000000;
+$lighter-black:lighten($main-black, 10%);
+
+//white
+$white:#FFFFFF;
+$white-smoke:#ecf0f2;
+
+//green
+$limegreen:#17b424;
+$light-green:#00b68e;
+
+//gray
+$dark-gray:#606060;
+$gray:#bdbdbd;
+$light-gray:#e0e0e0;
+$silver:#c1c1c1;
+
+//red
+$red:#fc2717;
+
+//blue
+$steel-blue:#4998ca;
+$light-blue:#9ec8e3;
+
+//gold
+$gold:#ffd600;
+
+
+ //media query 
+$media-desktop: "only screen and (max-width : 1224px)";
+$media-tablet: "only screen and (max-width : 768px)";
+$media-mobile: "only screen and (max-width : 600px)";
+$media-mobile-sm: "only screen and (max-width : 480px)";

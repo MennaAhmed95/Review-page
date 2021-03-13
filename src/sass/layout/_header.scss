@@ -1,0 +1,25 @@
+.header{
+    padding:1% 10%;
+    background-color:$white;
+    &__logo{
+        // @include size(1rem,2rem);
+        height: 5rem;
+    }
+@include flex(row,space-between);
+&__name{
+    @include flex(row,center);
+    align-items: center;
+    width: 28rem;
+    &__avatar{
+        @include size(3.5rem,3.5rem);
+        border-radius:50%;
+        margin-right: 3%;
+    }
+    &__title{
+        flex-wrap: nowrap;
+        font-weight: 400;
+        font-size: 2.2rem;
+        color:$dark-gray;
+    }
+    }
+}

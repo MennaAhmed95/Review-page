@@ -1,0 +1,122 @@
+.landPage{
+    position: relative;
+    @include flex(column,center,center);
+    &__landImg{
+        @include size(100%,52rem);
+        object-fit: cover;
+        opacity: 0.75;
+       
+    }
+    .content{
+        @include flex(column,center,center);
+        position: absolute;
+        overflow: visible;
+        z-index:2 ;
+        top:30rem;
+        &__title{
+            font-size: 3vw;
+            font-weight: 600;
+            text-align: center;
+            color:$white;
+            padding-bottom:4rem ;
+            margin-top: -10%;
+        }
+        &__btn{
+            // font-size: 1rem;
+            font-weight: 600;
+            background:$white;
+            color: $light-green;
+            width: 20rem;
+            padding: 1rem;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius:.5rem;
+        }
+        &__card {
+            @include flex(column, center,center,wrap);
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width:57%;
+            border-radius: .5rem;
+            background-color:$white;
+            margin: 7% 0 1% 0;
+            &__per{
+                @include size(10rem,10rem);
+                border-radius:50%;
+                margin:-5%;
+                
+            }
+            &__container{
+                padding: 5rem 1.6rem 2rem 1.6rem;
+                @include flex(column,center,center);
+                &__personName{ 
+                    color:$steel-blue;
+                    margin: 1%;
+                }
+                &__date {
+                    color: $gray;
+                    margin:1%;
+                }
+                &__titl{
+                    margin: 1%;
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                }
+                &__rate{
+                    display: flex;
+                    margin: 2%;
+                    @include size(30%,5rem);
+                    border: 1px solid  $light-gray;
+                    border-radius:.5rem;
+
+                }
+                &__paragraph{
+                    width: 80%;
+                    text-align: justify;
+                    margin: 1.5%;
+                    padding: 1.5%;
+                    line-height: 1.3;
+
+                }
+
+            }
+          }
+          .diff{
+            background: $light-green;
+            color:$white ;
+
+          }
+         
+          .like{
+              @include size(25%,100%);
+              @include flex(row,center,center);
+             color:$white;
+             background-color:$limegreen;
+          }
+          .dislike{
+            @include size(25%,100%);
+            @include flex(row,center,center);
+           color:$white;
+           background-color:$red; 
+          }
+          .star{ 
+              width: 70%;
+              margin: 1%;
+              padding: 2%;
+              color:$light-gray;
+              @include flex(row,space-evenly,center)
+          }
+          .black{
+            color: $main-black;
+          }
+    }
+      
+}
+.fa-star{
+    cursor: pointer;
+    color:$light-gray ;
+    transition: color 200ms;
+}  
+.checked {
+    color:$gold;
+  }
