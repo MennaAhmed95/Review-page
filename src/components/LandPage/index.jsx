@@ -1,12 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReviewCard from "../ReviewCard";
 import Modal from "./../Modal/index";
+import axios from "axios";
 
 const LandPage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [reviews, setReviews] = useState([]);
+
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(async () => {
+    const response = await fetch("http://localhost:3009/reviews");
+    const data = await response.json();
+    setReviews(data);
+  }, []);
+
   return (
     <section className="landPage">
       <img
@@ -23,8 +33,21 @@ const LandPage = () => {
           classModal={`modal ${isOpen ? "block" : ""}`}
           toggleModal={toggleModal}
         />
-        <ReviewCard rating="3" />
-        <ReviewCard rating="1" />
+        {reviews &&
+          reviews.map((item) => {
+            return (
+              <ReviewCard
+                key={item}
+                rating={item.rating}
+                src={item.person.picture.medium}
+                personNam={`${item.person.name.first} ${item.person.name.last}`}
+                date="20 Dec 2020"
+                title={item.title}
+                details={item.details}
+                id={item._id}
+              />
+            );
+          })}
       </div>
     </section>
   );
